@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://kit.fontawesome.com/a076d05399.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Anita's Tarven | Home</title>
+  <style>
+     nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+    }
+
+    .banner {
+      width: 100%;
+      height: 150px;
+      background-image: url('banner2.png');
+      background-size: contain;
+      background-position: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--text-color);
+      font-size: 3rem;
+      font-weight: bold;
+      position: relative;
+      margin-top: 60px;
+    }
+
+    .banner::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .banner h1 {
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 600px) {
+      .banner {
+        height: 200px;
+        font-size: 1.5rem;
+      }
+    }
+
+	
+	    section#Home {
+      padding: 100px 20px 50px 20px;
+      text-align: center;
+    }
+
+    .main {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .men_text h1 {
+      font-size: 60px;
+    }
+
+    .men_text h1 span {
+      color: #fac031;
+      font-family: 'mv boli', cursive;
+      font-size: 70px;
+    }
+
+    .main_images img {
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+    }
+
+    section p {
+      max-width: 700px;
+      margin: 20px auto;
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    .main_btn {
+      background: #fac031;
+      margin: 20px auto;
+      display: inline-block;
+      padding: 12px 25px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .main_btn a, .main_btn i {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .main_btn:hover i {
+      transform: translateX(5px);
+      transition: 0.3s;
+    }
+
+    /* About section */
+    .about {
+      width: 100%;
+      padding: 70px 20px;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    .about_main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .about_main .images img {
+      max-width: 500px;
+      width: 100%;
+      height: auto;
+    }
+
+    .about_text {
+      max-width: 600px;
+    }
+
+    .about_text h1 {
+      font-size: 55px;
+    }
+
+    .about_text h1 span {
+      color: #fac031;
+    }
+
+    .about_text h3 {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+
+    .about_text p {
+      text-align: justify;
+      line-height: 1.5;
+    }
+
+    .about_btn {
+      display: inline-block;
+      background: #fac031;
+      color: #fff;
+      padding: 12px 25px;
+      margin-top: 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+	.gallary{
+    width: 100%;
+    padding: 70px 0;
+}
+
+.gallary h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallary h1 span{
+    margin-left: 15px;
+    color: #fac031;
+    font-family: mv boli;
+}
+
+.gallary h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fac031;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+
+.gallary .gallary_image_box{
+    width: 95%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.gallary .gallary_image_box .gallary_image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+
+.gallary .gallary_image_box .gallary_image img{
+    width: 100%;
+    transition: .3s;
+}
+
+.gallary .gallary_image_box .gallary_image:hover img{
+    opacity: 0.4;
+}
+
+.gallary .gallary_image_box .gallary_image h3{
+    position: absolute;
+    font-size: 35px;
+    margin-bottom: 130px;
+    color: #fac031;
+    font-family: polo;
+    z-index: 5;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.gallary .gallary_image_box .gallary_image:hover h3{
+    opacity: 1;
+}
+
+.gallary .gallary_image_box .gallary_image p{
+    position: absolute;
+    width: 400px;
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+    line-height: 22px;
+    opacity: 0;
+    z-index: 5;
+    transition: 0.3s;
+}
+
+.gallary .gallary_image_box .gallary_image:hover p{
+    opacity: 1;
+}
+
+.gallary .gallary_image_box .gallary_image .gallary_btn{
+    position: absolute;
+    margin-top: 180px;
+    color: #000;
+    background: #fac031;
+    padding: 7px 25px;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateY(45px);
+    z-index: 5;
+    transition: 0.3s;
+}
+
+.gallary .gallary_image_box .gallary_image:hover .gallary_btn{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+	
+  </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><a href="#">Anita's Tarven</a></span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#">Anita's Tarven</a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html" class='active'>Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+                   </div>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+	
+  <div class="banner">
+    
+  </div>
+           <main>
+                <div class="slider">
+
+
+        <div class="list">
+
+            <div class="item">
+                <img src="./images/fastfood.jpg" alt="">
+
+                <div class="content">
+                    <div class="title">We Provide</div>
+                    <div class="type">Breakfast</div>
+                    <div class="description">
+                     We are best at what we do!
+                    </div>
+                    <div class="button">
+                        <button>Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="./images/dinner.jpg" alt="">
+
+                <div class="content">
+                    <div class="title">We Have Best</div>
+                    <div class="type">Family Diner Packs </div>
+                    <div class="description">
+                     Enjoy with your loved Ones!
+                    </div>
+                    <div class="button">
+                        <button>Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="./images/bakery.jpg" alt="">
+
+                <div class="content">
+                    <div class="title">We Also Bake</div>
+                    <div class="type">Best Bread Types</div>
+                    <div class="description">
+					 We do it with Love!
+                    </div>
+                    <div class="button">
+                        <button>Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="./images/salad.jpg" alt="">
+
+                <div class="content">
+                    <div class="title">Are You Vegetarian..</div>
+                    <div class="type">Go For Our Salads</div>
+                    <div class="description">
+                     No One Must left Out!
+                    </div>
+                    <div class="button">
+                        <button>Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="thumbnail">
+
+            <div class="item">
+                <img src="./images/fastfood.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="./images/dinner.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="./images/bakery.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="./images/salad.jpg" alt="">
+            </div>
+
+        </div>
+
+
+        <div class="nextPrevArrows">
+            <button class="prev"> < </button>
+            <button class="next"> > </button>
+        </div>
+
+
+    </div>
+          </main>
+		  
+<section id="Home">
+    <div class="main">
+      <div class="men_text">
+        <h1>Get Fresh <span>Food</span><br> in an Easy Way</h1>
+      </div>
+      <div class="main_images">
+        <img src="images/main_img.png" alt="Main Food Image">
+      </div>
+    </div>
+    <p>
+      Great Value For The Little You Spend..
+    </p>
+    <div class="main_btn">
+      <a href="#">Order Now</a>
+      <i class="fa-solid fa-angle-right"></i>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <div class="about" id="About">
+    <div class="about_main">
+      <div class="images">
+        <img src="images/Food-Plate.png" alt="Food Plate">
+      </div>
+      <div class="about_text">
+        <h1><span>About</span> Us</h1>
+        <h3>Why Choose Us?</h3>
+        <p>
+          Choose Us Because We Chose You..
+        </p>
+      </div>
+    </div>
+    <a href="#" class="about_btn">Order Now</a>
+  </div>
+    <div class="gallary" id="Gallary">
+        <h1>Speacial<span>Deals</span></h1>
+
+        <div class="gallary_image_box">
+            <div class="gallary_image">
+                <img src="images/gallary_1.jpg">
+
+                <h3>Cake Slice</h3>
+                <p>
+                    Get a taste of Anita's Tarven Cake
+                </p>
+                <a href="#" class="gallary_btn">Order Now</a>
+            </div>
+
+            <div class="gallary_image">
+                <img src="images/gallary_2.jpg">
+
+                <h3>Cup Cakes</h3>
+                <p>
+                    Cream Cup Cakes are now available 
+                </p>
+                <a href="#" class="gallary_btn">Order Now</a>
+            </div>
+
+            <div class="gallary_image">
+                <img src="images/gallary_3.jpg">
+
+                <h3>Chocolate Cup Cakes</h3>
+                <p>
+                    Bite Into Happiness..
+                </p>
+                <a href="#" class="gallary_btn">Order Now</a>
+            </div>
+
+            <div class="gallary_image">
+                <img src="images/gallary_4.jpg">
+
+                <h3>Raisen Loaf</h3>
+                <p>
+                    Tiny Slices,Big delight its our raisen loaf magic
+                </p>
+                <a href="#" class="gallary_btn">Order Now</a>
+            </div>
+
+            <div class="gallary_image">
+                <img src="images/gallary_5.jpg">
+
+                <h3>Cheese Pizza</h3>
+                <p>
+                    Craffing exceedingly good pizza for your sweet cravings
+                </p>
+                <a href="#" class="gallary_btn">Order Now</a>
+            </div>
+
+            <div class="gallary_image">
+                <img src="images/gallary_6.jpg">
+
+                <h3>Cake</h3>
+                <p>
+                    Baked with love and honor 
+                </p>
+                <a href="#" class="gallary_btn">Order Now</a>
+            </div>
+
+        </div>
+
+    </div>
+
+		  
+		  
+		  
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section about">
+      <h2>About Us</h2>
+      <p style=" color:white">We bring you the freshest flavors and best recipes. Taste the love we put into every meal!</p>
+    </div>
+
+    <div class="footer-section links">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="contactus">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section contact">
+      <h2>Contact Us</h2>
+      <p>Email: info@Anita's Tarven.com</p>
+      <p>Phone: +123 456 7890</p>
+      <div class="socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-pinterest"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-section newsletter">
+      <h2>Newsletter</h2>
+      <form action="#">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Anita's Tarven. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+
+<!-- FontAwesome for Social Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+
+
+<script src="script.js"></script>
+<script src="app.js"></script>
+  <script>
+    window.addEventListener('scroll', function() {
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
+
+
+</html>

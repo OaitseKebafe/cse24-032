@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Anita's Tarven | Menu </title>
+  <style>
+          nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+    }
+
+    .banner {
+      width: 100%;
+      height: 150px;
+      background-image: url('banner2.png');
+      background-size: contain;
+      background-position: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--text-color);
+      font-size: 3rem;
+      font-weight: bold;
+      position: relative;
+      margin-top: 60px;
+    }
+
+    .banner::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .banner h1 {
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 600px) {
+      .banner {
+        height: 200px;
+        font-size: 1.5rem;
+      }
+    }
+.menu-section {
+  width: 100%;
+  padding: 50px 0;
+}
+
+.menu-section h1 {
+  font-size: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.menu-section h1 span {
+  color: #fac031;
+  margin-left: 15px;
+  font-family: 'MV Boli', cursive;
+}
+
+.menu-section h1 span::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #fac031;
+  display: block;
+  position: relative;
+  bottom: 12px;
+}
+
+.menu-section .menu-box {
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.menu-section .menu-card {
+  background: white;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.menu-section .menu-card:hover {
+  transform: translateY(-5px);
+}
+
+.menu-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.menu-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.menu-card:hover .menu-image img {
+  transform: scale(1.05);
+}
+
+.small-card {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #fff;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.small-card i {
+  font-size: 16px;
+  color: #000;
+  transition: color 0.3s;
+}
+
+.small-card i:hover {
+  color: #fac031;
+}
+
+.menu-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.menu-info h2 {
+  font-size: 20px;
+  color: #fac031;
+  margin-bottom: 10px;
+}
+
+.menu-info p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.menu-info h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.menu-icon {
+  color: #fac031;
+  margin-bottom: 10px;
+}
+
+.menu-btn {
+  display: inline-block;
+  padding: 8px 20px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.menu-btn:hover {
+  background: #fac031;
+  color: #000;
+}
+
+  </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><a href="#">Anita's Tarven</a></span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#">Anita's Tarven</a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html" class= 'active'>Menu</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+                   </div>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+  
+  <div class="banner">
+    
+  </div>
+  <section>
+  <div class="menu-section" id="Menu">
+    <h1>Our <span>Menu</span></h1>
+
+    <div class="menu-box">
+
+      <!-- Burger -->
+      <div class="menu-card">
+        <div class="menu-image">
+          <img src="images/buger.jpg" alt="Burger">
+        </div>
+        <div class="small-card"><i class="fa-solid fa-heart"></i></div>
+        <div class="menu-info">
+          <h2>Burger</h2>
+          <p>We provide in different colors and flavours</p>
+          <h3>$20.00</h3>
+          <div class="menu-icon">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <a href="#" class="menu-btn">Order Now</a>
+        </div>
+      </div>
+
+      <!-- Pasta -->
+      <div class="menu-card">
+        <div class="menu-image">
+          <img src="images/pasta.jpg" alt="Pasta">
+        </div>
+        <div class="small-card"><i class="fa-solid fa-heart"></i></div>
+        <div class="menu-info">
+          <h2>Pasta</h2>
+          <p>Hot chill Flavoured</p>
+          <h3>$20.00</h3>
+          <div class="menu-icon">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <a href="#" class="menu-btn">Order Now</a>
+        </div>
+      </div>
+
+      <!-- Lasagna -->
+      <div class="menu-card">
+        <div class="menu-image">
+          <img src="images/lasagna.webp" alt="Lasagna">
+        </div>
+        <div class="small-card"><i class="fa-solid fa-heart"></i></div>
+        <div class="menu-info">
+          <h2>Lasagna</h2>
+          <p>Has several Flavors</p>
+          <h3>$20.00</h3>
+          <div class="menu-icon">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <a href="#" class="menu-btn">Order Now</a>
+        </div>
+      </div>
+
+      <!-- Drink -->
+      <div class="menu-card">
+        <div class="menu-image">
+          <img src="images/chocolate_Drink.jpg" alt="Drink">
+        </div>
+        <div class="small-card"><i class="fa-solid fa-heart"></i></div>
+        <div class="menu-info">
+          <h2>Chocolate Drink</h2>
+          <p>Also available in different flavors</p>
+          <h3>$20.00</h3>
+          <div class="menu-icon">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <a href="#" class="menu-btn">Order Now</a>
+        </div>
+      </div>
+
+      <!-- Pizza -->
+      <div class="menu-card">
+        <div class="menu-image">
+          <img src="images/pizza.jpg" alt="Pizza">
+        </div>
+        <div class="small-card"><i class="fa-solid fa-heart"></i></div>
+        <div class="menu-info">
+          <h2>Pizza</h2>
+          <p>Available at any time</p>
+          <h3>$20.00</h3>
+          <div class="menu-icon">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <a href="#" class="menu-btn">Order Now</a>
+        </div>
+      </div>
+
+      <!-- Hot Dog -->
+      <div class="menu-card">
+        <div class="menu-image">
+          <img src="images/Hot_dog.jpg" alt="Hot Dog">
+        </div>
+        <div class="small-card"><i class="fa-solid fa-heart"></i></div>
+        <div class="menu-info">
+          <h2>Hot Dog</h2>
+          <p>New style of hotdogs</p>
+          <h3>$20.00</h3>
+          <div class="menu-icon">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <a href="#" class="menu-btn">Order Now</a>
+        </div>
+      </div>
+
+      <!-- Juice -->
+      <div class="menu-card">
+        <div class="menu-image">
+          <img src="images/juse.jpg" alt="Juice">
+        </div>
+        <div class="small-card"><i class="fa-solid fa-heart"></i></div>
+        <div class="menu-info">
+          <h2>Juice</h2>
+          <p>Something to cool off to</p>
+          <h3>$20.00</h3>
+          <div class="menu-icon">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <a href="#" class="menu-btn">Order Now</a>
+        </div>
+      </div>
+
+      <!-- Biryani -->
+      <div class="menu-card">
+        <div class="menu-image">
+          <img src="images/biryani.webp" alt="Biryani">
+        </div>
+        <div class="small-card"><i class="fa-solid fa-heart"></i></div>
+        <div class="menu-info">
+          <h2>Biryani</h2>
+          <p>Try Indian Food</p>
+          <h3>$20.00</h3>
+          <div class="menu-icon">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <a href="#" class="menu-btn">Order Now</a>
+        </div>
+      </div>
+
+      <!-- Chocolate -->
+      <div class="menu-card">
+        <div class="menu-image">
+          <img src="images/chocolate.jpg" alt="Chocolate">
+        </div>
+        <div class="small-card"><i class="fa-solid fa-heart"></i></div>
+        <div class="menu-info">
+          <h2>Chocolate</h2>
+          <p>Also Available</p>
+          <h3>$20.00</h3>
+          <div class="menu-icon">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <a href="#" class="menu-btn">Order Now</a>
+        </div>
+      </div>
+
+      <!-- Ice Cream -->
+      <div class="menu-card">
+        <div class="menu-image">
+          <img src="images/ice_cream.jpg" alt="Ice Cream">
+        </div>
+        <div class="small-card"><i class="fa-solid fa-heart"></i></div>
+        <div class="menu-info">
+          <h2>Ice Cream</h2>
+          <p>Something tatsy</p>
+          <h3>$20.00</h3>
+          <div class="menu-icon">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <a href="#" class="menu-btn">Order Now</a>
+        </div>
+      </div>
+
+      <!-- Spanchi -->
+      <div class="menu-card">
+        <div class="menu-image">
+          <img src="images/Spanchi.jpg" alt="Spanchi">
+        </div>
+        <div class="small-card"><i class="fa-solid fa-heart"></i></div>
+        <div class="menu-info">
+          <h2>Spanchi</h2>
+          <p>Available in Easter Specials</p>
+          <h3>$20.00</h3>
+          <div class="menu-icon">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <a href="#" class="menu-btn">Order Now</a>
+        </div>
+      </div>
+
+      <!-- Sandwich -->
+      <div class="menu-card">
+        <div class="menu-image">
+          <img src="images/sandwich.jpg" alt="Sandwich">
+        </div>
+        <div class="small-card"><i class="fa-solid fa-heart"></i></div>
+        <div class="menu-info">
+          <h2>Sandwich</h2>
+          <p>Satisfy Your Hunger</p>
+          <h3>$20.00</h3>
+          <div class="menu-icon">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <a href="#" class="menu-btn">Order Now</a>
+        </div>
+      </div>
+    
+	<div class="menu-card">
+        <div class="menu-image">
+          <img src="images/chocolate.jpg" alt="Chocolate">
+        </div>
+        <div class="small-card"><i class="fa-solid fa-heart"></i></div>
+        <div class="menu-info">
+          <h2>Chocolate</h2>
+          <p>Its sweet and lovely</p>
+          <h3>$20.00</h3>
+          <div class="menu-icon">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <a href="#" class="menu-btn">Order Now</a>
+        </div>
+      </div>
+
+      <!-- Ice Cream -->
+      <div class="menu-card">
+        <div class="menu-image">
+          <img src="images/ice_cream.jpg" alt="Ice Cream">
+        </div>
+        <div class="small-card"><i class="fa-solid fa-heart"></i></div>
+        <div class="menu-info">
+          <h2>Ice Cream</h2>
+          <p>Available in Special</p>
+          <h3>$20.00</h3>
+          <div class="menu-icon">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <a href="#" class="menu-btn">Order Now</a>
+        </div>
+      </div>
+
+      <!-- Spanchi -->
+      <div class="menu-card">
+        <div class="menu-image">
+          <img src="images/Spanchi.jpg" alt="Spanchi">
+        </div>
+        <div class="small-card"><i class="fa-solid fa-heart"></i></div>
+        <div class="menu-info">
+          <h2>Spanchi</h2>
+          <p>Available In Special</p>
+          <h3>$20.00</h3>
+          <div class="menu-icon">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <a href="#" class="menu-btn">Order Now</a>
+        </div>
+      </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section about">
+      <h2>About Us</h2>
+      <p style=" color:white">We bring you the freshest flavors and best recipes. Taste the love we put into every meal!</p>
+    </div>
+
+    <div class="footer-section links">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="contactus">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section contact">
+      <h2>Contact Us</h2>
+      <p>Email: info@Anita's Tarven.com</p>
+      <p>Phone: +123 456 7890</p>
+      <div class="socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-pinterest"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-section newsletter">
+      <h2>Newsletter</h2>
+      <form action="#">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Anita's Tarven. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- FontAwesome for Social Icons -->
+<script src="https://kit.fontawesome.com/your-fontawesome-kit-code.js" crossorigin="anonymous"></script>
+
+
+
+<script src="script.js"></script>
+
+<script>
+  window.addEventListener('scroll', function() {
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  });
+</script>
+
+</html>

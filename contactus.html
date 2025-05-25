@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Anita's Tarven | Contact Us</title>
+  <style>
+              nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+    }
+
+    .banner {
+      width: 100%;
+      height: 150px;
+      background-image: url('banner2.png');
+      background-size: contain;
+      background-position: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--text-color);
+      font-size: 3rem;
+      font-weight: bold;
+      position: relative;
+      margin-top: 60px;
+    }
+
+    .banner::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .banner h1 {
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 600px) {
+      .banner {
+        height: 200px;
+        font-size: 1.5rem;
+      }
+    }
+    .order {
+      width: 100%;
+      min-height: 100vh;
+      padding: 70px 20px;
+      background-image: url('images/bg2.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .order h1 {
+      text-align: center;
+      color: #000;
+      font-size: 55px;
+    }
+
+    .order h1 span {
+      color: #fac031;
+      margin-right: 15px;
+      font-family: 'MV Boli', cursive;
+    }
+
+    .order_main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .order_image img {
+      width: 100%;
+      max-width: 500px;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 600px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .input {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .input p {
+      margin-bottom: 5px;
+    }
+
+    .input input {
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      background: #f9f9f9;
+    }
+
+    .order_btn {
+      grid-column: 1 / -1;
+      background: #fac031;
+      color: #fff;
+      text-align: center;
+      padding: 12px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      form {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><a href="#">Anita's Tarven</a></span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#">Anita's Tarven</a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contactus.html" class='active'>Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+                   </div>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+         <div class="banner">
+    
+  </div>
+  <section>
+            <div class="order" id="Order">
+        <h1><span>Order</span>Now</h1>
+
+        <div class="order_main">
+
+            <div class="order_image">
+                <img src="images/order_image.png">
+            </div>
+
+            <form action="#">
+
+                <div class="input">
+                    <p>Name</p>
+                    <input type="text" placeholder="you name">
+                </div>
+
+                <div class="input">
+                    <p>Email</p>
+                    <input type="email" placeholder="you email">
+                </div>
+
+                <div class="input">
+                    <p>Number</p>
+                    <input placeholder="you number">
+                </div>
+
+                <div class="input">
+                    <p>How Much</p>
+                    <input type="number" placeholder="how many order">
+                </div>
+
+                <div class="input">
+                    <p>You Order</p>
+                    <input placeholder="food name">
+                </div>
+
+                <div class="input">
+                    <p>Address</p>
+                    <input placeholder="you Address">
+                </div>
+
+                <a href="#" class="order_btn">Order Now</a>
+
+            </form>
+
+        </div>
+
+    </div>
+    
+           </section>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section about">
+      <h2>About Us</h2>
+         <p style=" color:white">We bring you the freshest flavors and best recipes. Taste the love we put into every meal!</p>
+    </div>
+
+    <div class="footer-section links">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="contactus">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section contact">
+      <h2>Contact Us</h2>
+      <p>Email: info@Anita's Tarven.com</p>
+      <p>Phone: +123 456 7890</p>
+      <div class="socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-pinterest"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-section newsletter">
+      <h2>Newsletter</h2>
+      <form action="#">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Anita's Tarven. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- FontAwesome for Social Icons -->
+<script src="https://kit.fontawesome.com/your-fontawesome-kit-code.js" crossorigin="anonymous"></script>
+
+
+
+<script src="script.js"></script>
+  <script>
+    function validateForm() {
+      const form = document.getElementById("orderForm");
+      for (let input of form.querySelectorAll("input[required]")) {
+        if (!input.value.trim()) {
+          alert("Please fill in all fields.");
+          return false;
+        }
+      }
+      alert("Order submitted successfully!");
+      return true;
+    }
+  </script>
+<script>
+  window.addEventListener('scroll', function() {
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  });
+</script>
+
+</html>

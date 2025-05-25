@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Anita's Tarven | Recipes</title>
+  <style>
+          nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+    }
+
+    .banner {
+      width: 100%;
+      height: 150px;
+      background-image: url('banner2.png');
+      background-size: contain;
+      background-position: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--text-color);
+      font-size: 3rem;
+      font-weight: bold;
+      position: relative;
+      margin-top: 60px;
+    }
+
+    .banner::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .banner h1 {
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 600px) {
+      .banner {
+        height: 200px;
+        font-size: 1.5rem;
+      }
+    }
+	.gallary{
+    width: 100%;
+    padding: 70px 0;
+}
+
+.gallary h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallary h1 span{
+    margin-left: 15px;
+    color: #fac031;
+    font-family: mv boli;
+}
+
+.gallary h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fac031;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+
+.gallary .gallary_image_box{
+    width: 95%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.gallary .gallary_image_box .gallary_image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+
+.gallary .gallary_image_box .gallary_image img{
+    width: 100%;
+    transition: .3s;
+}
+
+.gallary .gallary_image_box .gallary_image:hover img{
+    opacity: 0.4;
+}
+
+.gallary .gallary_image_box .gallary_image h3{
+    position: absolute;
+    font-size: 35px;
+    margin-bottom: 130px;
+    color: #fac031;
+    font-family: polo;
+    z-index: 5;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.gallary .gallary_image_box .gallary_image:hover h3{
+    opacity: 1;
+}
+
+.gallary .gallary_image_box .gallary_image p{
+    position: absolute;
+    width: 400px;
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+    line-height: 22px;
+    opacity: 0;
+    z-index: 5;
+    transition: 0.3s;
+}
+
+.gallary .gallary_image_box .gallary_image:hover p{
+    opacity: 1;
+}
+
+.gallary .gallary_image_box .gallary_image .gallary_btn{
+    /* Your original button styles preserved */
+    position: absolute;
+    margin-top: 180px;
+    color: #000;
+    background: #fac031;
+    padding: 7px 25px;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateY(45px);
+    z-index: 5;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.gallary .gallary_image_box .gallary_image:hover .gallary_btn{
+    opacity: 1;
+    transform: translateY(0);
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 70%;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.recipe-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.ingredients-section {
+    border-right: 2px solid #fac031;
+    padding-right: 20px;
+}
+
+.ingredients-section h3,
+.instructions-section h3 {
+    color: #fac031;
+    margin-bottom: 15px;
+}
+
+#modalIngredients li {
+    margin-bottom: 8px;
+    list-style-type: square;
+}
+
+#modalSteps li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+  </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><a href="#">Anita's Tarven</a></span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#">Anita's Tarven</a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="recipes.html" class='active'>Recipes</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+                   </div>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+	  <div class="banner">
+    
+  </div>
+        <article>
+		<div class="gallary" id="Gallary">
+    <h1>Speacial<span>Recipes</span></h1>
+
+    <div class="gallary_image_box">
+        <!-- Card 1 -->
+        <div class="gallary_image" data-ingredients="Pasta, Tomato Sauce, Cheese, Basil" data-steps="Boil pasta~Heat sauce~Combine and bake">
+            <img src="images/recipe1.jpg">
+            <h3>Classic Lasagna</h3>
+            <p>
+                Layered pasta with rich tomato sauce and melted cheese
+            </p>
+            <a href="#" class="gallary_btn">Try It Yourself</a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="gallary_image" data-ingredients="Beef, Buns, Cheese, Lettuce" data-steps="Grill patty~Toast buns~Assemble toppings">
+            <img src="images/recipe2.jpg">
+            <h3>Premium Burger</h3>
+            <p>
+                Juicy beef patty with fresh vegetables and special sauce
+            </p>
+            <a href="#" class="gallary_btn">Try It Yourself</a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="gallary_image" data-ingredients="Dough, Pepperoni, Cheese, Tomato" data-steps="Knead dough~Add toppings~Bake at 220°C">
+            <img src="images/gallary_5.jpg">
+            <h3>Pepperoni Pizza</h3>
+            <p>
+                Thin crust pizza with double pepperoni and mozzarella
+            </p>
+            <a href="#" class="gallary_btn">Try It Yourself</a>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="gallary_image" data-ingredients="Salmon, Rice, Nori, Avocado" data-steps="Prepare rice~Slice fish~Roll and cut">
+            <img src="images/recipe3.jpg">
+            <h3>Sushi Platter</h3>
+            <p>
+                Fresh salmon sushi with avocado and special dipping sauce
+            </p>
+            <a href="#" class="gallary_btn">Try It Yourself</a>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="gallary_image" data-ingredients="Chicken, Spices, Yogurt, Garlic" data-steps="Marinate chicken~Skewer pieces~Grill">
+            <img src="images/recipe4.jpg">
+            <h3>Tandoori Chicken</h3>
+            <p>
+                Authentic Indian grilled chicken with spices and herbs
+            </p>
+            <a href="#" class="gallary_btn">Try It Yourself</a>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="gallary_image" data-ingredients="Chocolate, Flour, Eggs, Sugar" data-steps="Mix ingredients~Bake 180°C~Decorate">
+            <img src="images/recipe5.jpeg">
+            <h3>Chocolate Cake</h3>
+            <p>
+                Rich chocolate layer cake with creamy frosting
+            </p>
+            <a href="#" class="gallary_btn">Try It Yourself</a>
+        </div>
+    </div>
+</div>
+		
+		
+		</article>
+	<div id="recipeModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <div class="recipe-info">
+            <div class="ingredients-section">
+                <h3>Ingredients</h3>
+                <ul id="modalIngredients"></ul>
+            </div>
+            <div class="instructions-section">
+                <h3>Instructions</h3>
+                <ol id="modalSteps"></ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section about">
+      <h2>About Us</h2>
+     <p style=" color:white">We bring you the freshest flavors and best recipes. Taste the love we put into every meal!</p>
+    </div>
+
+    <div class="footer-section links">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="contactus">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section contact">
+      <h2>Contact Us</h2>
+      <p>Email: info@Anita's Tarven.com</p>
+      <p>Phone: +123 456 7890</p>
+      <div class="socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-pinterest"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-section newsletter">
+      <h2>Newsletter</h2>
+      <form action="#">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Anita's Tarven. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- FontAwesome for Social Icons -->
+<script src="https://kit.fontawesome.com/your-fontawesome-kit-code.js" crossorigin="anonymous"></script>
+
+
+
+<script src="script.js"></script>
+<script>
+// Get modal elements
+const modal = document.getElementById("recipeModal");
+const span = document.getElementsByClassName("close")[0];
+
+// Add click event to all gallery buttons
+document.querySelectorAll('.gallary_btn').forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        const galleryItem = e.target.closest('.gallary_image');
+        const title = galleryItem.querySelector('h3').textContent;
+        const ingredients = galleryItem.dataset.ingredients.split(', ');
+        const steps = galleryItem.dataset.steps.split('~');
+
+        // Populate modal content
+        document.getElementById('modalTitle').textContent = title;
+        
+        const ingredientsList = document.getElementById('modalIngredients');
+        ingredientsList.innerHTML = ingredients.map(ing => 
+            `<li>${ing}</li>`).join('');
+
+        const stepsList = document.getElementById('modalSteps');
+        stepsList.innerHTML = steps.map((step, index) => 
+            `<li>${step}</li>`).join('');
+
+        modal.style.display = "block";
+    });
+});
+
+// Close modal
+span.onclick = () => modal.style.display = "none";
+window.onclick = (event) => {
+    if (event.target == modal) modal.style.display = "none";
+}
+</script>
+<script>
+  window.addEventListener('scroll', function() {
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  });
+</script>
+
+</html>
