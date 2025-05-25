@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Anita's Tarven | About Us</title>
+  <style>
+              nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+    }
+
+    .banner {
+      width: 100%;
+      height: 150px;
+      background-image: url('banner2.png');
+      background-size: contain;
+      background-position: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--text-color);
+      font-size: 3rem;
+      font-weight: bold;
+      position: relative;
+      margin-top: 60px;
+    }
+
+    .banner::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .banner h1 {
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 600px) {
+      .banner {
+        height: 200px;
+        font-size: 1.5rem;
+      }
+    }
+		
+	    section#Home {
+      padding: 100px 20px 50px 20px;
+      text-align: center;
+    }
+
+    .main {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .men_text h1 {
+      font-size: 60px;
+    }
+
+    .men_text h1 span {
+      color: #fac031;
+      font-family: 'mv boli', cursive;
+      font-size: 70px;
+    }
+
+    .main_images img {
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+    }
+
+    section p {
+      max-width: 700px;
+      margin: 20px auto;
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    .main_btn {
+      background: #fac031;
+      margin: 20px auto;
+      display: inline-block;
+      padding: 12px 25px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .main_btn a, .main_btn i {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .main_btn:hover i {
+      transform: translateX(5px);
+      transition: 0.3s;
+    }
+
+    /* About section */
+    .about {
+      width: 100%;
+      padding: 70px 20px;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    .about_main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .about_main .images img {
+      max-width: 500px;
+      width: 100%;
+      height: auto;
+    }
+
+    .about_text {
+      max-width: 600px;
+    }
+
+    .about_text h1 {
+      font-size: 55px;
+    }
+
+    .about_text h1 span {
+      color: #fac031;
+    }
+
+    .about_text h3 {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+
+    .about_text p {
+      text-align: justify;
+      line-height: 1.5;
+    }
+
+    .about_btn {
+      display: inline-block;
+      background: #fac031;
+      color: #fff;
+      padding: 12px 25px;
+      margin-top: 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+	.team{
+    width: 100%;
+    height: 90vh;
+    background-image: url(image/bg1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.team h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+    margin-bottom: 30px;
+}
+
+.team h1 span{
+    color: #fac031;
+    margin-left: 15px;
+    font-family: mv boli;
+}
+
+.team h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fac031;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+
+.team .team_box{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 13%;
+}
+
+.team .team_box .profile{
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    transition: 0.4s;
+}
+
+.team .team_box .profile:hover{
+    border-radius: 20px;
+    height: 320px;
+}
+
+.team .team_box .profile img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    z-index: 2;
+    transition: 0.4s;
+}
+
+.team .team_box .profile:hover img{
+    border-radius: 20px;
+    margin-top: -230px;
+}
+
+.team .team_box .profile .info{
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    transition: 0.4s;
+}
+
+.team .team_box .profile:hover .info{
+    top: 60%;
+}
+
+.team .team_box .profile .info .name{
+    color: #fac031;
+    margin-bottom: 15px;
+}
+
+.team .team_box .profile .info .bio{
+    width: 70%;
+    text-align: center;
+    margin: 0 auto 10px auto;
+}
+
+.team .team_box .profile .info .team_icon i{
+    margin: 10px 5px 5px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.team .team_box .profile .info .team_icon i:hover{
+    color: #fac031;
+}
+
+review{
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+}
+
+.review h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.review h1 span{
+    margin-left: 15px;
+    color: #fac031;
+    font-family: mv boli;
+}
+
+.review h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fac031;
+    position: relative;
+    bottom: 15px;
+    display: block;
+}
+
+.review .review_box{
+    width: 95%;
+    margin: 70px auto;
+    display: flex;
+}
+
+.review .review_box .review_card{
+    width: 350px;
+    height: 535px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    border-radius: 8px;
+    padding: 8px 20px;
+    margin: 0 8px;
+}
+
+.review .review_box .review_card .review_profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: 0.3s;
+}
+
+.review .review_box .review_card:hover .review_profile{
+    transform: translateY(-60px);
+}
+
+.review .review_box .review_card .review_profile img{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 5px solid #cccccc;
+}
+
+.review .review_box .review_card .review_text{
+    text-align: center;
+}
+
+.review .review_box .review_card .review_text .name{
+    color: #000;
+    transition: 0.3s;
+}
+
+.review .review_box .review_card:hover .review_text .name{
+    transform: translateY(-50px);
+}
+
+.review .review_box .review_card .review_text .review_icon{
+    color: #fac031;
+    transition: 0.3s;
+}
+
+.review .review_box .review_card:hover .review_text .review_icon{
+    transform: translateY(-30px);
+}
+
+.review .review_box .review_card .review_text .review_social i{
+    margin: 5px 1px;
+    font-size: 15px;
+    opacity: 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.review .review_box .review_card:hover .review_text .review_social i{
+    opacity: 1;
+    transform: translateY(-8px);
+}
+
+
+  </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><a href="#">Anita's Tarven</a></span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#">Anita's Tarven</a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="aboutus.html" class='active'>About Us</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+                   </div>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+           <div class="banner">
+    
+  </div>
+  <main>
+                <div class="slider">
+
+
+        <div class="list">
+
+            <div class="item">
+                <img src="./images/fastfood.jpg" alt="">
+
+                <div class="content">
+                    <div class="title">We Provide</div>
+                    <div class="type">Breakfast</div>
+                    <div class="description">
+                     We are best at what we do!
+                    </div>
+                    <div class="button">
+                        <button>Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="./images/dinner.jpg" alt="">
+
+                <div class="content">
+                    <div class="title">We Have Best</div>
+                    <div class="type">Family Diner Packs </div>
+                    <div class="description">
+                     Enjoy with your loved Ones!
+                    </div>
+                    <div class="button">
+                        <button>Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="./images/bakery.jpg" alt="">
+
+                <div class="content">
+                    <div class="title">We Also Bake</div>
+                    <div class="type">Best Bread Types</div>
+                    <div class="description">
+					 We do it with Love!
+                    </div>
+                    <div class="button">
+                        <button>Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="./images/salad.jpg" alt="">
+
+                <div class="content">
+                    <div class="title">Are You Vegetarian..</div>
+                    <div class="type">Go For Our Salads</div>
+                    <div class="description">
+                     No One Must left Out!
+                    </div>
+                    <div class="button">
+                        <button>Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="thumbnail">
+
+            <div class="item">
+                <img src="./images/fastfood.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="./images/dinner.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="./images/bakery.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="./images/salad.jpg" alt="">
+            </div>
+
+        </div>
+
+
+        <div class="nextPrevArrows">
+            <button class="prev"> < </button>
+            <button class="next"> > </button>
+        </div>
+
+
+    </div>
+          </main>
+        <section id="Home">
+    <div class="main">
+      <div class="men_text">
+        <h1>Get Fresh <span>Food</span><br> in an Easy Way</h1>
+      </div>
+      <div class="main_images">
+        <img src="images/main_img.png" alt="Main Food Image">
+      </div>
+    </div>
+    <p>
+      Great Value For The Little You Spend..
+    </p>
+    <div class="main_btn">
+      <a href="#">Order Now</a>
+      <i class="fa-solid fa-angle-right"></i>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <div class="about" id="About">
+    <div class="about_main">
+      <div class="images">
+        <img src="images/Food-Plate.png" alt="Food Plate">
+      </div>
+      <div class="about_text">
+        <h1><span>About</span> Us</h1>
+        <h3>Why Choose Us?</h3>
+        <p>
+          We make food out of love and honor
+        </p>
+      </div>
+    </div>
+    <a href="#" class="about_btn">Order Now</a>
+  </div>
+        <div class="team">
+        <h1>Our<span>Heroes</span></h1>
+
+        <div class="team_box">
+            <div class="profile">
+                <img src="images/chef1.png">
+
+                <div class="info">
+                    <h2 class="name">Chef Marco Banner</h2>
+                    <p class="bio">Winner of Food Recipe Contests in Africa</p>
+
+                    <div class="team_icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="profile">
+                <img src="images/chef2.png">
+
+                <div class="info">
+                    <h2 class="name">Chef Lisa Ryan</h2>
+                    <p class="bio">Veteran with Masters in Bakery</p>
+
+                    <div class="team_icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="profile">
+                <img src="images/chef3.jpg">
+
+                <div class="info">
+                    <h2 class="name">Chef Derick Gunner</h2>
+                    <p class="bio">A Great Leader Of Men</p>
+
+                    <div class="team_icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="profile">
+                <img src="images/chef4.jpg">
+
+                <div class="info">
+                    <h2 class="name">Chef Max Malon</h2>
+                    <p class="bio">Nomine Of World Best Meat Roasters</p>
+
+                    <div class="team_icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+            <div class="review" id="Review">
+        <h1>Customer<span>Review</span></h1>
+
+        <div class="review_box">
+            <div class="review_card">
+
+                <div class="review_profile">
+                    <img src="images/review_1.png">
+                </div>
+
+                <div class="review_text">
+                    <h2 class="name">Lina Ellen</h2>
+
+                    <div class="review_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+
+                    <div class="review_social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+
+                    <p>
+                       "We had a fantastic dinner. Cozy atmosphere, hearty portions, and the house wine paired wonderfully with the meal. Highly recommend!"
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="review_card">
+
+                <div class="review_profile">
+                    <img src="images/review_2.png">
+                </div>
+
+                <div class="review_text">
+                    <h2 class="name">John Deon</h2>
+
+                    <div class="review_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+
+                    <div class="review_social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+
+                    <p>
+                      "The best local spot I've visited in a long time. Everything from starters to dessert was flawless. Will definitely come back."
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="review_card">
+
+                <div class="review_profile">
+                    <img src="images/review_3.png">
+                </div>
+
+                <div class="review_text">
+                    <h2 class="name">Monalisa</h2>
+
+                    <div class="review_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+
+                    <div class="review_social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+
+                    <p>
+                      "The food was decent, though nothing really stood out. Prices are fair for what you get. Good spot if you're nearby."
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="review_card">
+
+                <div class="review_profile">
+                    <img src="images/review_4.png">
+                </div>
+
+                <div class="review_text">
+                    <h2 class="name">Tobby Maguire</h2>
+
+                    <div class="review_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+
+                    <div class="review_social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+
+                    <p>
+                     "Absolutely loved it! The grilled fish was fresh and perfectly seasoned. Great service too—our waiter was so attentive!"
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>   
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section about">
+      <h2>About Us</h2>
+         <p style=" color:white">We bring you the freshest flavors and best recipes. Taste the love we put into every meal!</p>
+    </div>
+
+    <div class="footer-section links">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="contactus">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section contact">
+      <h2>Contact Us</h2>
+      <p>Email: info@Anita's Tarven.com</p>
+      <p>Phone: +123 456 7890</p>
+      <div class="socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-pinterest"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-section newsletter">
+      <h2>Newsletter</h2>
+      <form action="#">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Anita's Tarven. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- FontAwesome for Social Icons -->
+<script src="https://kit.fontawesome.com/your-fontawesome-kit-code.js" crossorigin="anonymous"></script>
+
+
+
+<script src="script.js"></script>
+<script src="app.js"></script>
+<script>
+  window.addEventListener('scroll', function() {
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  });
+</script>
+
+</html>
